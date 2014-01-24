@@ -1,4 +1,6 @@
-from flask.ext.wtf import Form, TextField, TextAreaField, SubmitField, validators, ValidationError
+from flask.ext.wtf import Form
+from wtforms import TextField, TextAreaField, SubmitField, validators
+from wtforms.validators import ValidationError
 
 class ContactForm(Form):
   name = TextField("Name",  [validators.Required("Please enter your name.")])
